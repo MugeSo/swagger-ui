@@ -184,6 +184,7 @@ SwaggerUi.Views.AuthView = Backbone.View.extend({
     passwordFlow: function (scopes, tokenUrl, username, password, OAuthSchemeKey) {
         var params = {
             'scope': scopes.join(' '),
+            'client_id': clientId,
             'username': username,
             'password': password,
             'grant_type': 'password'
